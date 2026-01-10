@@ -1,0 +1,14 @@
+# Passive Radar Micro-Doppler Simulator - Python Dependencies
+# Version: 1.0
+# Python: >= 3.8
+
+# Core scientific computing
+numpy>=1.21.0,<2.0.0          # Array operations and FFT
+scipy>=1.7.0,<2.0.0           # Signal processing (STFT)
+
+# Visualization
+matplotlib>=3.4.0,<4.0.0      # Spectrogram plotting
+
+# Optional: For extended functionality
+# h5py>=3.0.0                 # HDF5 file export (alternative to .mat)
+# pandas>=1.3.0               # Data analysis and CSV export
