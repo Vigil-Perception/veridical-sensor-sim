@@ -1,0 +1,122 @@
+{
+  "sensor_configuration": {
+    "sensor_type": "Passive_Radar_X-Band",
+    "manufacturer": "Simulated (Vigil Perception SITL)",
+    "model": "VeriRadar-1.0",
+    "description": "Physics-based X-band passive radar simulator for drone micro-Doppler signatures"
+  },
+
+  "radar_parameters": {
+    "carrier_frequency_hz": 10000000000,
+    "carrier_frequency_ghz": 10.0,
+    "wavelength_m": 0.03,
+    "operating_band": "X-band",
+    "pulse_repetition_frequency_hz": 30000,
+    "sample_rate_hz": 30000,
+    "sample_rate_khz": 30.0,
+    "bandwidth_hz": 100000000,
+    "coherent_processing_interval_s": 0.15,
+    "dwell_time_ms": 150.0,
+    "stare_mode_enabled": true,
+    "icd_compliance_version": "VRD-ICD-001"
+  },
+
+  "target_parameters": {
+    "platform_type": "Quadcopter",
+    "reference_model": "DJI Phantom 4 Pro",
+    "num_rotors": 4,
+    "blades_per_rotor": 2,
+    "total_blades": 8,
+    "rotor_rpm": 5000,
+    "rotor_frequency_hz": 83.33,
+    "blade_radius_m": 0.191,
+    "blade_diameter_inches": 9.0,
+    "blade_tip_velocity_ms": 100.0,
+    "blade_material": "Carbon Fiber",
+    "body_rcs_m2": 0.01
+  },
+
+  "doppler_signature": {
+    "max_doppler_shift_hz": 6667,
+    "blade_flash_frequency_hz": 333,
+    "fundamental_harmonic_hz": 333,
+    "second_harmonic_hz": 666,
+    "third_harmonic_hz": 999,
+    "doppler_bandwidth_hz": 13334
+  },
+
+  "signal_processing": {
+    "stft_window_type": "hamming",
+    "stft_window_length": 256,
+    "stft_overlap": 192,
+    "stft_overlap_percent": 75,
+    "fft_size": 256,
+    "frequency_bins": 129,
+    "time_resolution_ms": 2.13,
+    "frequency_resolution_hz": 117.19
+  },
+
+  "noise_model": {
+    "signal_to_noise_ratio_db": 20,
+    "noise_floor_db": -80,
+    "thermal_noise_enabled": true,
+    "clutter_enabled": false
+  },
+
+  "output_configuration": {
+    "output_directory": "output",
+    "generate_spectrogram_image": true,
+    "generate_raw_iq_data": true,
+    "generate_binary_iq64": true,
+    "generate_matlab_export": true,
+    "generate_metadata_json": true,
+    "spectrogram_filename": "Figure_2_Radar.png",
+    "raw_iq_filename": "raw_iq_data.npy",
+    "binary_iq64_filename": "radar_capture.bin",
+    "matlab_filename": "matlab_export.mat",
+    "metadata_filename": "radar_metadata.json",
+    "icd_metadata_filename": "radar_capture.json"
+  },
+
+  "visualization": {
+    "figure_width_inches": 19.2,
+    "figure_height_inches": 10.8,
+    "figure_dpi": 100,
+    "save_dpi": 300,
+    "colormap": "inferno",
+    "alternative_colormaps": ["viridis", "plasma", "magma"],
+    "show_annotations": true,
+    "show_grid": true,
+    "title": "Passive Radar Micro-Doppler Signature - Quadcopter (5000 RPM)",
+    "xlabel": "Time (s)",
+    "ylabel": "Doppler Frequency (Hz)",
+    "colorbar_label": "Power Spectral Density (dB)"
+  },
+
+  "validation": {
+    "physics_accuracy_tests_enabled": true,
+    "doppler_shift_tolerance_hz": 100,
+    "blade_flash_tolerance_hz": 5,
+    "min_snr_db": 15,
+    "trl_level": 4,
+    "validation_status": "PENDING"
+  },
+
+  "metadata": {
+    "config_version": "2.0",
+    "created_date": "2026-01-10",
+    "updated_date": "2026-01-10",
+    "author": "Vigil Perception",
+    "project": "Veridical Sensor Simulation",
+    "jira_epic": "VRD-1",
+    "jira_task": "VRD-4",
+    "phase": "Phase 1 - SITL Development",
+    "compliance_standards": [
+      "VRD-ICD-001 (RF Data Standard)",
+      "IEEE 754-2008 (Floating Point)",
+      "IEEE 686-2017 (Radar Definitions)",
+      "STANAG 4586 (UAV Interoperability)"
+    ],
+    "notes": "Updated for VRD-3 ICD compliance: 30 kHz sample rate, 150 ms dwell (Stare Mode), binary complex64 export. Aligned with RDRD dataset specifications."
+  }
+}
