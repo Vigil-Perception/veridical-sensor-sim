@@ -1,0 +1,43 @@
+{
+  "format_version": "1.0",
+  "data_type": "radar_plot_extractor_output",
+  "jira_task": "VRD-32",
+  "epic": "VRD-1",
+  "timestamp_utc": "2026-01-11T15:10:59.358554Z",
+  "radar_model": "Blighter A400 (simulated)",
+  "radar_type": "X-band surveillance",
+  "radar_frequency_ghz": 10.0,
+  "beam_width_deg": 3.0,
+  "max_range_m": 5000.0,
+  "update_rate_hz": 1.0,
+  "azimuth_accuracy_deg_rms": 1.0,
+  "elevation_accuracy_deg_rms": 1.5,
+  "range_accuracy_m_rms": 10.0,
+  "missed_detection_probability": 0.05,
+  "measured_azimuth_error_deg_std": 157.85631065102882,
+  "measured_elevation_error_deg_std": 0.8911187864515339,
+  "measured_range_error_m_std": 6.959300070119502,
+  "num_detections": 57,
+  "track_ids": [
+    "TRK001_LINEAR"
+  ],
+  "radar_latitude_deg": 37.7749,
+  "radar_longitude_deg": -122.4194,
+  "radar_altitude_m": 10.0,
+  "slew_to_cue_input_format": {
+    "required_fields": [
+      "Timestamp",
+      "TrackID",
+      "Azimuth_Deg",
+      "Elevation_Deg",
+      "Range_m",
+      "Confidence"
+    ],
+    "coordinate_system": "AER (Azimuth-Elevation-Range, radar-centric)",
+    "azimuth_convention": "0\u00b0 = North, 90\u00b0 = East (clockwise)",
+    "elevation_convention": "0\u00b0 = horizon, 90\u00b0 = zenith",
+    "range_units": "meters (slant range)",
+    "uncertainty_model": "Gaussian, \u03c3 provided in metadata"
+  },
+  "notes": "Output format compatible with VRD-26 (Thermal/Visual turret slew-to-cue). Radar provides 'sloppy' detection (\u00b110m), turret provides 'precise' tracking."
+}

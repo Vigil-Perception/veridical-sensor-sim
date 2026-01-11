@@ -27,8 +27,11 @@ wheels/
 output/*.png
 output/*.npy
 output/*.mat
-output/*.json
 output/*.bin
+
+# Ignore large JSON data files but allow metadata
+output/*.json
+!output/*_metadata.json
 
 # Keep the output directory structure
 !output/.gitkeep
