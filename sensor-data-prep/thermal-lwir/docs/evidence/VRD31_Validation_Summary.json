@@ -1,0 +1,68 @@
+{
+  "validation_date": "2026-01-11T16:49:11.596800Z",
+  "scenarios": {
+    "night": {
+      "scenario": "night",
+      "visual_cnr": 0.010302935461856061,
+      "thermal_cnr": 0.8061216523288973,
+      "cnr_ratio": 78.2343460237172,
+      "visual_metrics": {
+        "mean_target": 1.7522249911000356,
+        "mean_background": 1.71275,
+        "std_target": 2.7081584080158514,
+        "std_background": 2.710302093402136,
+        "contrast": 0.039474991100035606,
+        "noise": 3.83143046399213,
+        "cnr": 0.010302935461856061
+      },
+      "thermal_metrics": {
+        "mean_target": 13.332358672771559,
+        "mean_background": 5.291060501392612,
+        "std_target": 9.961320369975367,
+        "std_background": 0.5277402236176798,
+        "contrast": 8.041298171378948,
+        "noise": 9.975290133971553,
+        "cnr": 0.8061216523288973
+      }
+    },
+    "fog": {
+      "scenario": "fog",
+      "visibility_m": 200,
+      "visual_cnr": 0.08924096359462605,
+      "thermal_cnr": 0.8028201030844953,
+      "cnr_ratio": 8.995993260874856,
+      "visual_metrics": {
+        "mean_target": 199.00818796724812,
+        "mean_background": 199.02405,
+        "std_target": 0.09011617191422713,
+        "std_background": 0.15320443041896667,
+        "contrast": 0.015862032751869037,
+        "noise": 0.1777428534160362,
+        "cnr": 0.08924096359462605
+      },
+      "thermal_metrics": {
+        "mean_target": 7.160385781469697,
+        "mean_background": 6.4497993583084146,
+        "std_target": 0.8839077921577557,
+        "std_background": 0.04615274904251645,
+        "contrast": 0.7105864231612822,
+        "noise": 0.8851118919556893,
+        "cnr": 0.8028201030844953
+      },
+      "fog_metadata": {
+        "visibility_m": 200,
+        "target_range_m": 500,
+        "beta_visible_km": 19.56,
+        "beta_lwir_km": 4.89,
+        "transmission": 0.08672613490173114,
+        "fog_temp_c": 6.5593416621005805
+      }
+    }
+  },
+  "acceptance_criteria": {
+    "night_cnr_ratio_min": 3.0,
+    "fog_cnr_ratio_min": 3.0,
+    "night_status": "PASS",
+    "fog_status": "PASS"
+  }
+}
