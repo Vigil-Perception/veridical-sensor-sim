@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Output files (keep structure, ignore generated data)
+output/*.png
+output/*.tiff
+output/*.tif
+output/*.mat
+output/*.bin
+
+# Ignore large JSON data files but allow metadata
+output/*.json
+!output/*_metadata.json
+
+# Keep the output directory structure
+!output/.gitkeep
+
+# FLIR dataset (too large for git - ~1.7GB total)
+data/raw/thermal_flir/FLIR_ADAS_v2/
+
+# Keep directory structure and README
+!data/raw/thermal_flir/.gitkeep
+!data/raw/thermal_flir/README.md
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary files
+*.tmp
+*.bak

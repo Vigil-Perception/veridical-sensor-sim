@@ -1,0 +1,29 @@
+Target_Type,Min_Temp_C,Max_Temp_C,Typical_Temp_C,Delta_T_vs_Sky_C,Emissivity,Contrast_Grade,Detection_Difficulty,Notes
+Drone_Motor_Active,40,60,50,40,0.95,HIGH,EASY,Brushless motors under load - primary hot spot signature
+Drone_Battery_LiPo,30,45,38,28,0.92,HIGH,EASY,Lithium polymer battery pack during operation
+Drone_Body_Composite,25,35,30,20,0.85,MEDIUM,MODERATE,Carbon fiber/plastic body - ambient + internal heat
+Drone_Electronics,35,50,42,32,0.90,HIGH,EASY,Flight controller and ESCs generate heat
+Bird_Surface_Feathers,25,32,28,18,0.97,MEDIUM,MODERATE,Insulated feathers reduce surface temperature
+Bird_Core_Body,38,42,40,NA,NA,NA,NA,Core temperature not externally visible
+Bird_Wings_Active,27,34,30,20,0.96,MEDIUM,MODERATE,Wing muscles generate heat during flight
+Cold_Sky_Clear,0,10,5,0,1.00,BASELINE,NA,Clear sky effective radiative temperature
+Cold_Sky_Overcast,5,15,10,0,0.95,BASELINE,NA,Cloud layer increases apparent sky temperature
+Ambient_Air_Day,15,30,22,12,NA,NA,NA,Daytime ambient temperature range
+Ambient_Air_Night,5,20,12,2,NA,NA,NA,Nighttime ambient temperature range
+Road_Asphalt_Day,25,50,38,28,0.93,VARIABLE,VARIABLE,Solar heating creates high background temperature
+Road_Asphalt_Night,5,15,10,0,0.93,BASELINE,NA,Radiative cooling at night
+Concrete_Surface_Day,22,45,34,24,0.88,VARIABLE,VARIABLE,Lower thermal mass than asphalt
+Vegetation_Trees,15,25,20,10,0.95,LOW,DIFFICULT,Evapotranspiration cooling effect
+Building_Exterior,18,28,23,13,0.85,LOW,DIFFICULT,Thermal mass smooths temperature variation
+Vehicle_Engine_Running,60,90,75,65,0.85,VERY_HIGH,VERY_EASY,High contrast thermal signature
+Person_Skin_Exposed,30,36,33,23,0.98,HIGH,EASY,Human thermal signature
+Person_Clothing,20,30,25,15,0.90,MEDIUM,MODERATE,Clothing insulates core temperature
+Water_Surface,10,25,18,8,0.96,LOW,DIFFICULT,High thermal mass stabilizes temperature
+Thermal_Crossover_Dawn,15,25,20,<5,NA,CRITICAL,UNRELIABLE,Ambient approaches target temperature
+Thermal_Crossover_Dusk,15,25,20,<5,NA,CRITICAL,UNRELIABLE,Rapid temperature equilibration
+Detection_Threshold_Min,NA,NA,NA,5,NA,MINIMUM,THRESHOLD,Minimum Delta T for reliable FLIR Boson detection
+Detection_Threshold_Good,NA,NA,NA,10,NA,GOOD,RELIABLE,Good thermal contrast for tracking
+Detection_Threshold_Excellent,NA,NA,NA,20,NA,EXCELLENT,VERY_RELIABLE,Excellent contrast for classification
+FLIR_Boson_NETD,NA,NA,NA,0.05,NA,SENSOR_SPEC,NA,Noise Equivalent Temperature Difference (mK)
+FLIR_Boson_Scene_Range_Min,-40,NA,-40,NA,NA,SENSOR_SPEC,NA,Minimum detectable scene temperature
+FLIR_Boson_Scene_Range_Max,NA,550,550,NA,NA,SENSOR_SPEC,NA,Maximum detectable scene temperature

@@ -1,0 +1,31 @@
+{
+  "dataset": "FLIR ADAS v2",
+  "analysis_date": "2026-01-11T17:26:31.353091Z",
+  "image_counts": {
+    "train": 10742,
+    "val": 1144,
+    "total": 11886
+  },
+  "intensity_statistics": {
+    "num_samples": 200,
+    "global_mean": 132.51420042419434,
+    "global_std": 59.44972361052428,
+    "global_min": 0.0,
+    "global_max": 255.0,
+    "avg_image_mean": 132.51420042419434,
+    "avg_image_std": 57.82354220341787,
+    "percentile_01": 13.0,
+    "percentile_05": 31.0,
+    "percentile_25": 87.0,
+    "percentile_50": 137.0,
+    "percentile_75": 179.0,
+    "percentile_95": 225.0,
+    "percentile_99": 241.0
+  },
+  "notes": [
+    "FLIR ADAS provides 8-bit thermal JPEG images (contrast-enhanced)",
+    "Not radiometric (no absolute temperature calibration)",
+    "Suitable for relative thermal analysis and object detection",
+    "VRD-27 AC-1: PASS (11,886 frames >> 100 required)"
+  ]
+}
