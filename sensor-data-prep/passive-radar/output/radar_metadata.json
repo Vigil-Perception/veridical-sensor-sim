@@ -1,0 +1,28 @@
+{
+  "sensor_type": "Passive_Radar_X-Band",
+  "simulation_timestamp": "2026-01-10T10:30:13.054215Z",
+  "parameters": {
+    "carrier_frequency_ghz": 10.0,
+    "sample_rate_khz": 30.0,
+    "duration_seconds": 0.15,
+    "target_type": "Quadcopter",
+    "rotor_rpm": 5000,
+    "blade_count": 8,
+    "blade_radius_m": 0.191
+  },
+  "calculated_metrics": {
+    "max_doppler_shift_hz": 6666.666666666667,
+    "blade_flash_frequency_hz": 666.6666666666666,
+    "blade_tip_velocity_ms": 100.00736613927508,
+    "wavelength_m": 0.03
+  },
+  "output_files": {
+    "spectrogram": "Figure_2_Radar.png",
+    "raw_data": "raw_iq_data.npy",
+    "matlab_export": "matlab_export.mat",
+    "metadata": "radar_metadata.json"
+  },
+  "validation_status": "PASS",
+  "trl_level": 4,
+  "notes": "Physics-based simulation for TRL 4 validation - Veridical Perception Fusion Engine"
+}
