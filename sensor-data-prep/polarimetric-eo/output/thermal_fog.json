@@ -1,0 +1,58 @@
+{
+  "format_version": "1.0",
+  "scenario": "fog",
+  "sensor": {
+    "model": "FLIR Boson 640",
+    "type": "uncooled_microbolometer",
+    "spectral_range_um": [
+      8.0,
+      14.0
+    ],
+    "resolution": {
+      "width": 640,
+      "height": 512
+    },
+    "netd_mk": 50.0
+  },
+  "radiometric": {
+    "bit_depth": 14,
+    "scale_factor_deg_c_per_count": 0.036,
+    "offset_deg_c": -40.0
+  },
+  "capture": {
+    "timestamp": "2026-01-11T16:46:00.626521Z",
+    "exposure_time_us": 8000
+  },
+  "environment": {
+    "weather_condition": "fog",
+    "visibility_m": 200.0
+  },
+  "thermal_analysis": {
+    "max_target_temp_c": 10.61236650275994,
+    "mean_target_temp_c": 7.639691698826843,
+    "min_background_temp_c": 6.331373094471453,
+    "mean_background_temp_c": 6.509719492802388,
+    "delta_t_deg_c": 4.280993408288487,
+    "snr_db": 5.851137401661458,
+    "thermal_contrast_grade": 0.0
+  },
+  "targets": [
+    {
+      "target_id": "TGT001",
+      "centroid": [
+        320,
+        256
+      ],
+      "max_temp_c": 50.0,
+      "classification": "drone_motor"
+    }
+  ],
+  "fog_attenuation": {
+    "visibility_m": 200.0,
+    "target_range_m": 500.0,
+    "beta_visible_km": 19.56,
+    "beta_lwir_km": 4.89,
+    "transmission": 0.08672613490173114,
+    "fog_temp_c": 6.625617995573978
+  }
+}

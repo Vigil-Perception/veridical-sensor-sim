@@ -1,0 +1,59 @@
+{
+  "thermal_detection": {
+    "target_id": "TGT001",
+    "thermal_centroid": {
+      "u": 320,
+      "v": 256
+    },
+    "thermal_classification": "drone_motor"
+  },
+  "coordinate_mapping": {
+    "thermal_frame": {
+      "u": 320,
+      "v": 256
+    },
+    "polarimetric_frame": {
+      "u": 370,
+      "v": 236
+    },
+    "boresight_offset": {
+      "dx": 50,
+      "dy": -20
+    }
+  },
+  "roi_extraction": {
+    "roi_location": {
+      "roi_center": {
+        "x": 370,
+        "y": 236
+      },
+      "roi_size": 256,
+      "roi_bounds": {
+        "x_min": 242,
+        "x_max": 498,
+        "y_min": 108,
+        "y_max": 364
+      }
+    },
+    "boundary_handling": {
+      "padding_applied": false,
+      "pad_amounts": null
+    }
+  },
+  "polarimetric_classification": {
+    "classification": "DRONE",
+    "confidence": "MEDIUM",
+    "veto_decision": "CONFIRM",
+    "metrics": {
+      "dolp_target_pct": 9.229222297668457,
+      "dolp_background_pct": 2.500000476837158,
+      "contrast_ratio": 3.6916885375976562
+    }
+  },
+  "fusion_decision": {
+    "material_type": "DRONE",
+    "confidence": "MEDIUM",
+    "veto": "CONFIRM",
+    "action": "TRACK_AS_DRONE"
+  }
+}

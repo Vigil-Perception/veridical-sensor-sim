@@ -1,0 +1,53 @@
+{
+  "sensor_configuration": {
+    "model": "Sony_IMX250MZR_Polarsens",
+    "manufacturer": "Sony Semiconductor Solutions",
+    "technology": "On-chip wire-grid polarizers",
+    "calibration_date": "2026-01-12",
+    "calibration_version": "1.0"
+  },
+  "boresight_offset_pixels": {
+    "dx": 50,
+    "dy": -20,
+    "note": "Polarimetric sensor offset relative to Thermal sensor (VRD-26)"
+  },
+  "baseline_separation_mm": 150.0,
+  "focus_distance_m": "infinity",
+  "sensor_intrinsics": {
+    "polarimetric_resolution": [2448, 2048],
+    "thermal_resolution": [640, 512],
+    "polarimetric_fov_deg": [28.5, 23.7],
+    "polarimetric_focal_length_mm": 25.0,
+    "polarimetric_pixel_size_um": 3.45,
+    "frame_rate_fps": 163
+  },
+  "polarization_calibration": {
+    "extinction_ratio_at_525nm": 300.0,
+    "extinction_ratio_at_430nm": 425.0,
+    "polarizer_angles_deg": [0, 45, 90, 135],
+    "transmission_efficiency": 0.95,
+    "demosaicing_method": "bilinear_interpolation"
+  },
+  "operational_limits": {
+    "min_ambient_lux": 200,
+    "min_solar_elevation_deg": 15,
+    "max_target_range_m": 2000,
+    "min_target_range_m": 100,
+    "optimal_ambient_lux": 10000,
+    "optimal_solar_elevation_deg": 60
+  },
+  "material_thresholds": {
+    "dolp_threshold_drone_high_pct": 10.0,
+    "dolp_threshold_drone_medium_pct": 8.0,
+    "dolp_threshold_ambiguous_pct": 5.0,
+    "dolp_threshold_bird_medium_pct": 3.0,
+    "min_contrast_ratio": 2.0,
+    "optimal_contrast_ratio": 3.0
+  },
+  "roi_processing": {
+    "default_roi_size": 256,
+    "max_roi_size": 512,
+    "min_roi_size": 128,
+    "boundary_padding_strategy": "zero_pad"
+  }
+}

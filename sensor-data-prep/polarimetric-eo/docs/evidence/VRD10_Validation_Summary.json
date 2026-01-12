@@ -1,0 +1,94 @@
+{
+  "validation_suite": "VRD-10: Visual Turing Test",
+  "timestamp": "1768185837.4976482",
+  "trl_level": "TRL-4",
+  "tests": {
+    "drone_bird_discrimination": {
+      "timestamp": "1768185837.4976482",
+      "scenarios": {
+        "drone": {
+          "classification": {
+            "classification": "DRONE",
+            "confidence": "MEDIUM",
+            "veto_decision": "CONFIRM",
+            "metrics": {
+              "dolp_target_pct": 9.216286659240723,
+              "dolp_background_pct": 2.500000238418579,
+              "contrast_ratio": 3.686514377593994
+            }
+          },
+          "rgb_image": "N/A (in-memory)",
+          "dolp_image": "docs\\evidence\\Validation_Polarimetry_Veto.png"
+        },
+        "bird": {
+          "classification": {
+            "classification": "UNKNOWN",
+            "confidence": "LOW",
+            "veto_decision": "INSUFFICIENT_CONTRAST",
+            "metrics": {
+              "dolp_target_pct": 2.199237585067749,
+              "dolp_background_pct": 2.500000238418579,
+              "contrast_ratio": 0.879694938659668
+            }
+          },
+          "rgb_image": "N/A (in-memory)",
+          "dolp_image": "docs\\evidence\\Validation_Polarimetry_Veto.png"
+        }
+      },
+      "acceptance_criteria": {
+        "AC-1_differentiation": {
+          "requirement": "Drone pixels \u22653x higher than background",
+          "drone_contrast": 3.686514377593994,
+          "bird_contrast": 0.879694938659668,
+          "pass": true
+        },
+        "AC-2_evidence_artifact": {
+          "requirement": "Validation_Polarimetry_Veto.png saved to docs/evidence/",
+          "path": "docs\\evidence\\Validation_Polarimetry_Veto.png",
+          "pass": true
+        },
+        "AC-3_scientific_appearance": {
+          "requirement": "Image includes color bar scale labeled DoLP %",
+          "pass": true
+        },
+        "AC-4_snr_calculated": {
+          "requirement": "SNR/Contrast ratio saved in JSON metadata",
+          "pass": true
+        }
+      },
+      "classification_accuracy": {
+        "drone_correct": true,
+        "bird_correct": true,
+        "overall_accuracy": true
+      }
+    },
+    "low_light_constraint": {
+      "scenario": "Low-light (dusk/overcast simulation)",
+      "classification": {
+        "classification": "UNKNOWN",
+        "confidence": "LOW",
+        "veto_decision": "INSUFFICIENT_CONTRAST",
+        "metrics": {
+          "dolp_target_pct": 5.533254146575928,
+          "dolp_background_pct": 3.5,
+          "contrast_ratio": 1.5809297561645508
+        }
+      },
+      "environmental": {
+        "simulated_ambient_lux": 150,
+        "simulated_solar_elevation_deg": 10,
+        "quality_metric": "LOW"
+      },
+      "constraint_validation": {
+        "requirement": "Low contrast inputs should flag quality_metric: LOW",
+        "contrast_ratio": 1.5809297561645508,
+        "quality_flag": "LOW",
+        "pass": true
+      }
+    }
+  },
+  "overall_status": {
+    "all_acceptance_criteria_met": true,
+    "classification_accuracy": true
+  }
+}

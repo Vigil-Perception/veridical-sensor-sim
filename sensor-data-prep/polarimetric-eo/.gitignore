@@ -1,0 +1,41 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large data files (reference only, do not commit)
+data/raw/*.tiff
+data/raw/*.tif
+data/raw/*.hdf5
+data/raw/*.h5
+*.bag
+*.pcap
+
+# Temporary output files
+*.tmp
+*.log
+
+# Keep directory structure
+!data/raw/.gitkeep
+!.gitignore
