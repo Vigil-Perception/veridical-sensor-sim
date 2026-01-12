@@ -1,0 +1,50 @@
+{
+  "format_version": "1.0",
+  "scenario": "clear_night",
+  "sensor": {
+    "model": "FLIR Boson 640",
+    "type": "uncooled_microbolometer",
+    "spectral_range_um": [
+      8.0,
+      14.0
+    ],
+    "resolution": {
+      "width": 640,
+      "height": 512
+    },
+    "netd_mk": 50.0
+  },
+  "radiometric": {
+    "bit_depth": 14,
+    "scale_factor_deg_c_per_count": 0.036,
+    "offset_deg_c": -40.0
+  },
+  "capture": {
+    "timestamp": "2026-01-11T16:46:00.626521Z",
+    "exposure_time_us": 8000
+  },
+  "environment": {
+    "weather_condition": "clear",
+    "visibility_m": 10000
+  },
+  "thermal_analysis": {
+    "max_target_temp_c": 52.595019395778465,
+    "mean_target_temp_c": 18.318445127809316,
+    "min_background_temp_c": 3.232812569205882,
+    "mean_background_temp_c": 5.289244560935001,
+    "delta_t_deg_c": 49.36220682657258,
+    "snr_db": 5.851140965799156,
+    "thermal_contrast_grade": 1.0
+  },
+  "targets": [
+    {
+      "target_id": "TGT001",
+      "centroid": [
+        320,
+        256
+      ],
+      "max_temp_c": 50.0,
+      "classification": "drone_motor"
+    }
+  ]
+}

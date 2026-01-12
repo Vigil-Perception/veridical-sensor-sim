@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-01-12T02:40:43.528239",
+  "sensor_model": "Sony_IMX250MZR",
+  "classification": {
+    "classification": "UNKNOWN",
+    "confidence": "LOW",
+    "veto_decision": "INSUFFICIENT_CONTRAST",
+    "metrics": {
+      "dolp_target_pct": 2.203181743621826,
+      "dolp_background_pct": 2.500000238418579,
+      "contrast_ratio": 0.8812726140022278
+    }
+  },
+  "processing_metadata": {
+    "simulation_mode": "virtual_injection",
+    "trl_level": "TRL-4",
+    "note": "Synthetic DoLP signatures injected for validation"
+  }
+}
